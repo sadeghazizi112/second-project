@@ -6,7 +6,7 @@
 
 ## Description
 
-_{This is my second independent project, pertaining to JavaScript and jQuery.}_
+_{This is my second independent project, pertaining to JavaScript and jQuery, where I was tasked with creating a webpage using HTML, CSS, jQuery, and JavaScript. I had to create branches, show and hide results, and be functional.}_
 
 ## Setup/Installation Requirements
 
