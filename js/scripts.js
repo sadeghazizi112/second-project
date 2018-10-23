@@ -5,15 +5,15 @@ $(document).ready(function() {
   $("form#age-check").submit(function(event) {
     event.preventDefault();
     age = $("#input-age").val();
-    var result = "Cue link to Next Question: Colors!";
+    var result = "Go ahead and click your most preferred color!";
     $("#output").text(result);
 
 
      var consent;
 
      if (age >= 18) {
-       $('[color]').show();
-       $('#MENU').show();
+       $('#color').show(); 
+       $('.menu').show();
      }
      else {
        $('#under-18').show();
@@ -22,17 +22,8 @@ $(document).ready(function() {
 
   });
 
+    var favoriteColor = $("#color").val();
 
-   $("h1#COLOR").click(function() {
-     $("#MENU").toggle();
-   });
 
-   $(".clickable").click(function() {
-     $(".menu2").toggle();
-   });
 
-   $(".clickable").click(function() {
-     $(".radio-showing").toggle();
-     $(".radio-hidden").toggle();
-   });
 });
