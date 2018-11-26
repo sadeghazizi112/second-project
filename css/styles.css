@@ -1,7 +1,7 @@
 
-/* .hidden {
+.hidden {
   display: none;
-} */
+}
 
 .clickable {
   cursor: pointer;
@@ -10,4 +10,16 @@
 
 .clickable:hover {
   text-decoration: underline;
+}
+
+.red {
+  background-color: red
+}
+
+.blue {
+  background-color: blue
+}
+
+.green {
+  background-color: green
 }
