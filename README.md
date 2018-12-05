@@ -1,12 +1,12 @@
 # _{Second Independent Project}_
 
-#### _{This is my JavaScript and jQuery Independent Project}, {10/23/18}_
+#### _{This is my JavaScript and jQuery Independent Project}, {12/5/18}_
 
 #### By _**{Sadegh Azizi}**_
 
 ## Description
 
-_{This is my second independent project, pertaining to JavaScript and jQuery, where I was tasked with creating a webpage using HTML, CSS, jQuery, and JavaScript. I had to create branches, show and hide results, and be functional.}_
+_{This is my second independent project, pertaining to JavaScript, CSS, and jQuery, where I was tasked with creating a webpage that helps Epicodus students decide which track they would like to pursue before they enroll.  I had to do this using HTML, CSS, jQuery, and JavaScript. I had to create branches, show and hide results, and be functional.}_
 
 ## Setup/Installation Requirements
 
@@ -32,7 +32,8 @@ _If you have any concerns, or have constructive feedback, please contact me at s
 * _CSS_
 * _GitBash_
 * _Atom_
+* _Bootstrap_
 
 ### License
 
-Copyright (c) 2018 **_Epicodus, Inc. GitHub, Inc._**
+Copyright (c) 2018 **_Epicodus, Inc. GitHub, Inc. Bootstrap_**

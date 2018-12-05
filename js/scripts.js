@@ -1,6 +1,9 @@
 var age;
-var result;
-var favoritesoda;
+var colormenu;
+var sodaquestion;
+var sodamenu;
+var canmenu;
+
 
 $(document).ready(function() {
   $('#colormenu').hide();
@@ -8,12 +11,16 @@ $(document).ready(function() {
   $('#nosoda').hide();
   $('#sodamenu').hide();
   $('#canmenu').hide();
+  $(".suggestion").hide();
+  $('#CNET').hide();
+  $('#RR').hide();
+  $('#CSS').hide();
+  $('#sorry').hide();
+
 
   $("form#age-check").submit(function(event) {
     event.preventDefault();
     age = $("#input-age").val();
-    // result = "Go ahead and click your most preferred color!";
-    // $("#output").text(result);
 
     if (age >= 18) {
       $('#colormenu').show();
@@ -27,18 +34,14 @@ $(document).ready(function() {
   });
 
   $('form#colormenu').submit(function(event) {
-    var colormenu = $("input#colormenu").val();
-    // result = "Okay, next question!";
-    // $("#output").text(result);
+    colormenu = $('select[name="colormenu"]').val();
     event.preventDefault();
     $('#sodaQ').show();
   });
 
   $('form#sodaQ').submit(function(event) {
-    var sodaquestion = $("input#sodaQ").val();
+    sodaquestion = $("form#sodaQ select").val();
     console.log(sodaquestion);
-    // result = "Okay, next question!";
-    // $("#output").text(result);
     event.preventDefault();
 
 
@@ -54,35 +57,41 @@ $(document).ready(function() {
 
 
    $('form#sodamenu').submit(function(event) {
-     var sodamenu = $("input#sodamenu").val();
-     console.log();
-     // result = "Okay, next question!";
-     $("#output").text(result);
+     sodamenu = $('select[name="sodamenu"]').val();
+     console.log(sodamenu);
      event.preventDefault();
      $('#canmenu').show();
    });
 
    $('form#canmenu').submit(function(event) {
-     var canmenu = $("input#canmenu").val();
-     console.log(can);
-     result = "Okay, final question!";
-     $("#output").text(result);
+     canmenu = $('select[name="canmenu"]').val();
+     console.log();
      event.preventDefault();
+     $(".suggestion").show();
+
+
+    console.log(age);
+    console.log(colormenu);
+    console.log(sodaquestion);
+    console.log(canmenu);
+    if ((parseInt(age) >= 18) && (colormenu === 'red') && (sodamenu === 'coke') && (sodaquestion === 'yes')
+    && (canmenu === 'can')) {
+    $('#CNET').show();
+    }
+
+    else if ((parseInt(age) >= 30) && (colormenu === 'blue') && (sodamenu === 'pepsi') && (sodaquestion === 'yes')
+    && (canmenu === 'bottle')) {
+    $('#RR').show();
+    }
+
+    else if ((parseInt(age) >= 20) && (colormenu === 'green') && (sodamenu === 'sprite') && (sodaquestion === 'yes')
+    && (canmenu === 'fountain')) {
+    $('#CSS').show();
+    }
+
+    else {
+      $('#sorry').show();
+    }
+
    });
-
-
-// $("#yourfavoritesoda").show();
-//
-// if (parseInt(age) =< 30 && (color === 'red') && (sodaquestion === 'yes')) {
-// $('#coke').show();
-// }
-// if (parseInt(age) =< 20 && (color === 'blue') && (sodaquestion === 'yes')) {
-// $('#pepsi').show();
-// }
-// if (parseInt(age) >= 20 && (color === 'green') && (sodaquestion === 'yes')) {
-// $('#sprite').show();
-// }
-// event.preventDefault();
-// });
-
 });
